@@ -1,0 +1,334 @@
+#blockly {
+  position: absolute;
+  bottom: 10px;
+  /* z-index: 100; */
+}
+#visualization {
+  position: relative;
+  margin-top: 10px;
+}
+#capacityBubble {
+  position: absolute;
+  margin-top: -0.5em;
+  left: 10px;
+  top: 375px;
+  width: 380px;
+}
+html[dir="RTL"] #capacityBubble {
+  left: auto;
+  right: 10px;
+}
+#capacity {
+  display: none;
+  color: #fff;
+  padding: 5px 1em;
+  border-radius: 15px;
+  background-color: rgba(64,64,64,0.7);
+  font-size: large;
+}
+.capacityNumber {
+  font-weight: bold;
+}
+#sampleOneTopBlock {
+  height: 80px;
+  width: 250px;
+}
+#pegSpin {
+  height: 50px;
+  width: 49px;
+  background-position: -343px 0px;
+  margin-top: 10px;
+  position: absolute;
+}
+html[dir="RTL"] #pegSpin {
+  background-position: -441px 0px;
+}
+
+.helpMenuFake {
+  border-radius: 4px;
+  background-color: #bfcdde;
+  color: #000;
+  padding: 0 1ex;
+  cursor: default;
+}
+img[src$="help_up.png"] {
+  margin: -20px 10px 0;
+  height: 64px;
+  width: 23px;
+}
+img[src$="help_down.png"] {
+  margin: 0 10px -20px;
+  height: 64px;
+  width: 23px;
+}
+
+#svgMaze {
+  overflow: hidden;
+}
+
+/* 'Look' icon */
+#look>path {
+  display: none;
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-opacity: 0.7;
+}
+
+/* Buttons */
+button.primary {
+  /* Can't use "text-align: start" due to IE. */
+  text-align: left;
+}
+html[dir="RTL"] button.primary {
+  text-align: right;
+}
+
+/* Sprited icons. */
+.icon21 {
+  height: 21px;
+  width: 21px;
+  background-image: url(icons.png);
+}
+.link {
+  background-position: 0px 0px;
+}
+.run {
+  background-position: 0px -21px;
+}
+.stop {
+  background-position: -21px -21px;
+}
+
+#pegmanButton {
+  padding: 0;
+  position: relative;
+}
+#pegmanButton:active {
+  border: 1px solid #ddd !important;
+}
+#pegmanButton>img {
+  margin-left: -0.5ex;
+  margin-right: 0.5ex;
+  height: 38px;
+  width: 49px;
+  background-position: -980px 0px;
+  opacity: 0.8;
+}
+html[dir="RTL"] #pegmanButton>img {
+  margin-left: 0.5ex;
+  margin-right: -0.5ex;
+}
+#pegmanButton>span {
+  position: absolute;
+  top: 0.8ex;
+  margin-left: -15px;
+}
+html[dir="RTL"] #pegmanButton>span {
+  margin-right: -15px;
+}
+#pegmanMenu {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #888;
+  display: none;
+  position: absolute;
+}
+#pegmanMenu>div {
+  background-color: #fff;
+}
+#pegmanMenu>div:hover {
+  background-color: #57e;
+}
+#pegmanMenu>div>img {
+  height: 38px;
+  width: 49px;
+  background-position: -980px 0px;
+}
+
+
+/* Jovan Custom CSS */
+
+.instruction-container{
+  position: absolute;
+  left: 420px;
+  top: 0px;
+  width: calc(100% - 440px);
+  /* padding-left: 420px; */
+}
+.instruction-header {
+  position: relative;
+  margin-top: 10px;
+  height: 40px;
+  background-color: rgb(207, 201, 222);
+}
+.instruction-title {
+  border-bottom: solid 2px black;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0px;
+}
+
+.music-button {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  padding: 7px;
+  margin: 0px;
+  border-radius: 5px;
+  background-color: rgb(166, 155, 193);
+  cursor: pointer;
+}
+
+.music-button i {
+  margin-right: 10px;
+}
+
+.music-button:hover {
+  background-color: rgb(0, 148, 202);
+}
+
+.instruction-content {
+  display: flex;
+  background-color: rgb(221, 221, 221);
+  padding: 10px;
+}
+
+.instruction-avatar {
+  max-width: 50px;
+  margin-right: 15px;
+}
+
+.instruction-text {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+}
+
+.instruction-text img {
+  max-height: 20px;
+  margin: 0px 5px;
+}
+
+ /* Need Help CSS */
+
+ .needhelp-container {
+  width: 420px;
+  padding-left: 10px;
+}
+
+.needhelp-title {
+  font-size: 18px;
+  color: #333;
+}
+
+.needhelp-bold {
+  color: #4d575f;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.needhelp-container img {
+  width: 380px;
+}
+
+.needhelp-content {
+  color: #0596ce;
+  font-size: 18px;
+}
+
+.open-modal {
+  cursor: pointer;
+}
+
+/* Video Popup Modal CSS */
+
+#fade {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+
+#light {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  border: 2px solid #FFF;
+  background: #FFF;
+  z-index: 1002;
+  overflow: visible;
+}
+
+#boxclose {
+  float: right;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #AEAEAE;
+  border-radius: 50%;
+  background: #222222;
+  font-size: 40px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 0px;
+  padding: 20px 8px;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  z-index: 1002;
+  opacity: 0.9;
+}
+
+#boxclose:hover {
+  padding: 24px 12px; 
+  right: -22px;
+  top: -22px;
+}
+
+#videoPlay{
+  float: right;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #AEAEAE;
+  border-radius: 12px;
+  background: #222222;
+  font-size: 30px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 0px;
+  padding: 25px 40px;
+  position: absolute;
+  left: calc(50% - 50px);
+  top: calc(50% - 40px);
+  z-index: 1002;
+  opacity: 0.7;
+}
+
+.boxclose:before {
+  content: "×";
+}
+
+#dialog {
+  z-index: 20 !important;
+}

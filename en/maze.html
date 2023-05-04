@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="google" value="notranslate">
+  <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Blockly Games : Maze</title>
+  <link rel="stylesheet" href="common/common.css">
+  <link rel="stylesheet" href="maze/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="common/boot.js"></script>
+  <!-- <script src="/common/storage.js"></script> -->
+</head>
+<body>
+
+</body>
+<script>
+  // $(document).ready(function(){
+  //   console.log("I am ready");
+  // })
+
+  function toogleMusic() {
+    var status = $(".music-status").html();
+    let audioDom = document.getElementById("backgroundMusic");
+      
+    if(status == "Off")
+    {
+      $(".music-status").html('On');
+      $(".music-button i").removeClass("fa-volume-off");
+      $(".music-button i").addClass("fa-music");
+      audioDom.play();
+
+      $(".music-button").css('color', 'rgb(118, 101, 160)');
+      $(".music-button").css('backgroundColor', 'white');
+    } else {
+      $(".music-status").html('Off');
+      $(".music-button i").removeClass("fa-music");
+      $(".music-button i").addClass("fa-volume-off");
+      audioDom.pause();
+
+      $(".music-button").css('color', 'white');
+      $(".music-button").css('backgroundColor', 'rgb(166, 155, 193)');
+    }
+  }
+
+  function popupmodal(){
+      lightbox_open();
+  }
+  $(document).keydown(function(e){
+      if (e.keyCode == 27) {
+          lightbox_close();
+      }
+  })
+
+  function lightbox_play() {
+      var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+      lightBoxVideo.play();
+      $("#videoPlay").hide();
+      lightBoxVideo.setAttribute("controls","controls")   
+  }
+
+  function lightbox_open() {
+      var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+      // window.scrollTo(0, 0);
+      document.getElementById('light').style.display = 'block';
+      document.getElementById('fade').style.display = 'block';
+      lightBoxVideo.currentTime = 0;
+      lightBoxVideo.pause();
+      lightBoxVideo.removeAttribute("controls");
+      $("#videoPlay").show();
+  }
+
+  function lightbox_close() {
+      var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+      document.getElementById('light').style.display = 'none';
+      document.getElementById('fade').style.display = 'none';
+      lightBoxVideo.pause();
+      $("#videoPlay").show();
+  }
+</script>
+</html>
